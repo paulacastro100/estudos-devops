@@ -57,3 +57,21 @@ https://git-scm.com/book/pt-br/v1/Git-Essencial-Gravando-Altera%C3%A7%C3%B5es-no
 
 Parei em: https://try.github.io/levels/1/challenges/19
 
+
+18/10 - SOURCE TREE E CRIANDO CONTA NO GIT HUB (CASA) ***********************
+
+- SOURCE TREE: ferramenta que provê uma interface gráfica para repositórios do GIT. Disponível para Windows ou Mac.
+- GIT HUB: serviço web de hospedagem compartilhada para projetos que usam o controle de versionamento GIT. Não precisa instalar pois é um serviço, basta criar uma conta.
+- CONTA NO GIT HUB:  PAULACASTRO100
+
+
+19/10 - CONTINUANDO OS ESTUDOS (TRABALHO) ***************************
+
+- Git Lab: Gerenciador de repositórios do Git como o Git Hub, mas usando servidores próprios, não operados pelo Git Hub
+- Git X Git Hub X Git Lab
+	- Git (controle de versão) 
+	- Git Hub (compartilhar projetos do GIT via web) 
+	- Git Lab (compartilhar projetos GIT mas em servidores próprios, não os operados pelo Git HUb)
+
+
+
