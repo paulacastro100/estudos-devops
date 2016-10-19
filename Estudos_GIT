@@ -67,11 +67,64 @@ Parei em: https://try.github.io/levels/1/challenges/19
 
 19/10 - CONTINUANDO OS ESTUDOS (TRABALHO) ***************************
 
+- Material: http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
 - Git Lab: Gerenciador de repositórios do Git como o Git Hub, mas usando servidores próprios, não operados pelo Git Hub
 - Git X Git Hub X Git Lab
 	- Git (controle de versão) 
 	- Git Hub (compartilhar projetos do GIT via web) 
 	- Git Lab (compartilhar projetos GIT mas em servidores próprios, não os operados pelo Git HUb)
 
+Continuação:
+- $ git branch clean-up => cria uma branch chamada clean_up
+- $ git branch => mostra as branches locais
+- $ git checkout clean-up => muda para a branch clean-up
+- $ git rm '*.txt' => remove da branch vigente todos os arquivos txt (mesmo que estejam dentro de outros diretorios)
+	É o "contrario" do add (ainda nao houve commit)
+	Resultado:
+	rm 'blue_octocat.txt'
+	rm 'octocat.txt'
+	rm 'octofamily/baby_octocat.txt'
+	rm 'octofamily/momma_octocat.txt'
+	rm 'red_octocat.txt'
+- $ git commit 	-m "Todos os cats foram removidos" => confirma a remoçao acima fazendo o commit
+	Resultado:
+	[clean_up 018b4e4] Todos os cats foram removidos
+ 	5 files changed, 5 deletions(-)
+ 	delete mode 100644 blue_octocat.txt
+ 	delete mode 100644 octocat.txt
+ 	delete mode 100644 octofamily/baby_octocat.txt
+ 	delete mode 100644 octofamily/momma_octocat.txt
+ 	delete mode 100644 red_octocat.txt
+- $ git checkout master => retorna para a branch master (que ainda possui os arquivos)
+ 	Resultado:
+	Switched to branch 'master'
+- $ git merge clean_up => faz o merge das mudanças da branch clean_up com a branch atual (master).
+	Resultado: deleta arquivos também da branch master
+	Updating 3852b4d..ec6888b
+	Fast-forward
+ 	blue_octocat.txt             |    1 -
+ 	octocat.txt                  |    1 -
+ 	octofamily/baby_octocat.txt  |    1 -
+ 	octofamily/momma_octocat.txt |    1 -
+ 	red_octocat.txt              |    1 -
+ 	5 files changed, 5 deletions(-)
+ 	delete mode 100644 blue_octocat.txt
+ 	delete mode 100644 octocat.txt
+ 	delete mode 100644 octofamily/baby_octocat.txt
+ 	delete mode 100644 octofamily/momma_octocat.txt
+ 	delete mode 100644 red_octocat.txt
+ - $ git branch -d clean_up => Deleta uma branch (Agora que já fiz o merge de clean_up com a master, não preciso mais da branch clean_up...)
+ 	Resultado:
+	Deleted branch clean_up (was ec6888b).
+- $ git push => coloca tudo oq que foi feito no repositório remoto 
+	Resultado:
+	To https://github.com/try-git/try_git.git
+   	3e70b0f..c7b8ff4  master -> master
+(fim do curso https://try.github.io/levels/1/challenges/1)
+
+Manual do GIT: https://git-scm.com/book/en/v2
+TODO:
+( ) Testar configurar o Git e clonar meu projeto estudos-devops
+	http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
 
 
