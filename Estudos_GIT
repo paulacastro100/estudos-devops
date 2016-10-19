@@ -1,2 +1,59 @@
 http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
 
+PENDENTE - Testar clonar meu projeto meu-site no git da minha maquina
+
+
+
+
+** COMANDOS E CONCEITOS DO GIT** 
+
+17/10 - INICIANDO OS ESTUDOS (CASA) ***************************
+
+- Material em: https://git-scm.com/book/pt-br/v1/Primeiros-passos-No%C3%A7%C3%B5es-B%C3%A1sicas-de-Git
+- Armazena snapshots dos arquivos, não diffs
+- Seções do Working Directory (Modificado) X Staging Area (Preparado) X Git Directory/Repository (Consolidado)
+- Tudo no Git tem seu checksum (valor para verificação de integridade), calculado via HASH
+- Quase todas as operações são locais (usa recurso ou arquivos armazenados localmente).
+- Instalação
+- arquivo git config
+- git config --global code.editor vim
+- git init
+- git clone (nao é checkout,ele traz tudo, até versoes anteriores)
+- Cada arquivo em seu diretório de trabalho pode estar em um de dois estados: monitoradoou não monitorado. Arquivos monitorados são arquivos que estavam no último snapshot; podendo estarinalterados, modificados ou selecionados. Arquivos não monitorados são todo o restante — qualquer arquivo em seu diretório de trabalho que não estava no último snapshot e também não estão em sua área de seleção. Quando um repositório é inicialmente clonado, todos os seus arquivos estarão monitorados e inalterados porque você simplesmente os obteve e ainda não os editou.
+- git add -> mantem selecionado para commit aquela versao do arquivo. Se houver mudança, necessario novo add antes de commitar
+- git status -> Changes to be committed X Changes not staged to be committed
+- arquivo .gitignore -> contem extensões que devem ser ignoradas pelo commit (ex. .o)
+- git diff -> compara o diretorio de trabalho com a área de seleçao. Mostra as mudanças que foram feitas e ainda não foram selecionadas.
+- git diff --staged  ou cached -> compara mudanças selecionadas X último commit
+        p.s. se ainda não selecionei os arquivos (add) não consigo fazer diff...
+- git commit
+        Resultado: [master 0987ca0] Este eh o commit teste da paula. 23h50.
+        master é a branch que recebeu o commit
+        0987ca0 é o checksum SHA-1 que o comit recebeu
+- git commit - v -> mostra no editor as alterações que foram feitas (diff)
+- $ git commit -m "Fazendo commit com a opcao -m, que permite escrever comentario sem entrar no editor de texto"
+- $ git commit -a -m "commit sem passar pela area de selecao. VAi de modified direto para comitado" -> nao precisa usar o add
+- $ git rm arquivoApagar.txt -> coloca a delecao na area de selecao
+- $ git rm --cached readme.txt -> apaga da área de selecao mas mantem no meu local
+
+Parei em "movendo arquivos":
+https://git-scm.com/book/pt-br/v1/Git-Essencial-Gravando-Altera%C3%A7%C3%B5es-no-Reposit%C3%B3rio
+
+
+18/10 - GIT TUTORIAL ONLINE (TRABALHO) ***************************
+
+- Git Tutorial - Try: https://try.github.io/levels/1/challenges/19
+- git log => 
+- git remote =>  Repositórios remotos são versões do seu projeto que estão hospedados na Internet ou em uma rede em algum lugar. Você pode ter vários deles, geralmente cada um é somente leitura ou leitura/escrita pra você. Colaborar com outros envolve gerenciar esses repositórios remotos e fazer o push e pull de dados neles quando você precisa compartilhar trabalho. 
+- git remote add => To push our local repo to the GitHub server we'll need to add a remote repository. 
+- git push => empurra para o repositório remoto os seus commits, ou seja, envia as mudanças locais para o repositório origin no Git Hub
+		The name of our remote is origin and the default local branch name is master.  
+- git push -u origin master => memoriza o repositorio (origin e branch). No próximo push não preciso informar
+- git pull origin master => traz as mudanças do repositorio remoto para o local (working directory). Ex. Fiz o push e algum já fez o pull, editou, e fez push denovo. Agora o arquivo está alterado.
+	No resultado mostra os arquivos alterados / inseridos
+- git diff HEAD => mostra as diferenças entre o último commit e o que está no seu working directory neste momento. (vc commita rapidamente estas mudanças se adicionar -a ao commit)
+- Branches => copias em que os desenvolvedores atuam e fazem commit ao desenvolver features ou arrumar bugs. Ao terminar os trababalho eles podem fazer merge destas branches com a principal, a master.
+- git branch clean_up  => cria-se uma branch
+
+Parei em: https://try.github.io/levels/1/challenges/19
+
