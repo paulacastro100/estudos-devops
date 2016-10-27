@@ -1,0 +1,48 @@
+************************************* CONTINUOUS DELIVERY / ENTREGA CONTÍNUA ***********************************************
+ 
+ FONTE: http://www.serena.com/files/2714/2809/3787/Serene-Software-Continuous-Delivery-Automating-the-Deployment-Pipeline-SolutionBrief.pdf
+P.S.: Em 2016 a Microfocus comprou a Serena, empresa que oferece soluções de Application Lifecycle Management (ALM) solution 
+
+
+O QUE É: 
+- Continuous Delivery é uma pratica de entreta de software que requer que você faça build e deploy de software que possa ser liberado para produção a qualquer momento.
+
+OBJETIVO: 
+- Encontrar formas de entregar sw de valor de alta qualidade de uma forma eficiente, rápida e confiável.
+
+DESAFIO: 
+- Para isso você precisa continuamente  integrar as mudanças do sw do desenvolviemnto, fazer buils, testar e fazer o deploy dos executáveis e estar pronto para liberar para produção assim que o negócio desejar. 
+- Reduzir o tempo entre a prancheta e o rollout.
+
+BENEFÍCIOS: 
+- Permite que o negocio responda rapidamente às necessidades dos clientes, aumentando qualidade a um menor cuso.
+- A empresa pode se adaptar mais rapidamente às mudanças do mercado.
+
+COMO FUNCIONA:
+- O padrão principal é o Deployment Pipeline, ciclo a seguir, movido pelas Mudanças.
+        Deployment > CI > Unit Test > Deploy > Auto Test > Release (Deploy) > Deployment > ....
+  Este é um padrão efetivo de se obter sw, mas automatizar este processo pela empresa toda é o desafio.
+  Este pipeline se fundamenta em Integração Contínua.
+
+CONTINUOUS INTEGRATION / INTEGRACAO CONTINUA
+- Não existe CD sem CI.
+- Permite que os times de desenvolvimento automatizem a integração, build e teste de código dentro do ambiente de desenvolviemtno.
+- Usando um servidor de CI (por ex. Jenkins) os ambientes de desenvolvimento e de build se torman integrados e automatizado.
+- O build pode ser feito/triggered via:
+  - commit no sistema de controle de versões
+  - schedulagem 
+  - execução de novo build quando outros estiverem completos 
+  - requisição de uma URL especifica de build.
+  
+ COMO É O PROCESSO DISCONEXO - SEM CONTINUOUS DELIVERY?
+  Equipe Dev:
+    - desenvolve
+    - continuous integration (ex commit já gera o build)
+    - teste unitario
+  Equipe QA:
+    - faz deploy
+    - libera testes automatizados
+  Equipe Ops:
+    - faz o release (deploy)
+
+http://www.serena.com/index.php/en/
