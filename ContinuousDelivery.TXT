@@ -35,14 +35,30 @@ CONTINUOUS INTEGRATION / INTEGRACAO CONTINUA
   - requisição de uma URL especifica de build.
   
  COMO É O PROCESSO DISCONEXO - SEM CONTINUOUS DELIVERY?
-  Equipe Dev:
-    - desenvolve
-    - continuous integration (ex commit já gera o build)
-    - teste unitario
-  Equipe QA:
-    - faz deploy
-    - libera testes automatizados
-  Equipe Ops:
-    - faz o release (deploy)
+ CICLO:
+     Equipe Dev:
+       - desenvolve
+       - continuous integration (ex commit já gera o build)
+       - teste unitario
+     Equipe QA:
+       - faz deploy
+       - libera testes automatizados
+     Equipe Ops:
+       - faz o release (deploy)
+PROBLEMAS
+- Equipes de Desenvolvimento e de Deploy geralmente tem processos, ferramentas scripts diferentes para o deploy e teste dos sistemas. 
+- Dev comeca um processo manual e intensivo de deploy de candidatos a release para os ambiente de teste e produção => GARGALO => deploy de baixa qualidade, ciclos mais longos
 
-http://www.serena.com/index.php/en/
+
+PRODUTOS
+1) Serena Deployment Automation - http://www.serena.com/index.php/en/
+- Resolve o problema doprocesso disconexo, automatizando todo o processo de Pipeline de Deployment.
+  - integra toda a cadeia de ferramentas 
+      - CI (ex Jenkins)
+      - ferramentas de automação de testes
+      - starta testes dentro do processo de deploy
+      - provisiona toda a stack applications atraves de plugins para Chef, AWS ou VMWare.
+- Modela o processo do controle do fonte à entrega ao cliente.
+Commit > instancia-se um novo pipeline de deployment e dependento da aplicação ou da mudança pode passar por diferentes caminhos.
+- Application Centric Deployment Automation
+(...) http://www.serena.com/files/2714/2809/3787/Serene-Software-Continuous-Delivery-Automating-the-Deployment-Pipeline-SolutionBrief.pdf
