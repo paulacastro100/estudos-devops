@@ -1,0 +1,17 @@
+*** 07/11 ****
+
+Relembrando (de Continuous Delivery):
+
+CONTINUOUS INTEGRATION / INTEGRACAO CONTINUA
+- Não existe CD sem CI.
+- Permite que os times de desenvolvimento automatizem a integração, build e teste de código dentro do ambiente de desenvolviemtno.
+- Usando um servidor de CI (por ex. Jenkins) os ambientes de desenvolvimento e de build se torman integrados e automatizado.
+- O build pode ser feito/triggered via:
+  - commit no sistema de controle de versões
+  - schedulagem 
+  - execução de novo build quando outros estiverem completos 
+  - requisição de uma URL especifica de build.
+  
+  
+  
+  
