@@ -13,7 +13,9 @@ TODO:
 Como usar NodeJS no Openshift: https://developers.openshift.com/languages/nodejs/getting-started.html
 
 
-*********************** JENKINS ***************************** 
+*********************** JENKINS (Trabalho 07/11) ***************************** 
+
+
 Como seria CI com o Jenkins
 https://developers.openshift.com/managing-your-applications/continuous-integration.html#basic-workflow
 1) criar o jenkins 
@@ -37,6 +39,57 @@ Logs são registrados para indicar problemas duranto do build, teste ou deploy n
      
 REVER: How does a Jenkins build work? 
     https://developers.openshift.com/managing-your-applications/continuous-integration.html#basic-workflow
+    
+    
+    
+****  INSTALAÇÃO ****
+    https://www.eriwen.com/tools/continuous-integration-for-javascript/
+    http://testdetective.com/jenkins-begginers-dojo/
+    
+- comando para abrir o .jar e subir o jenkins
+- acessar http://localhost:8080/ no browser
+- pular a configuração do servidor 
+- inserir um user e senha de admin
+
+TODO(!!!)
+    http://testdetective.com/jenkins-begginers-dojo/    
+- instalar e configurar o Apache Tomcat
+    - O Jenkins vem como um arquivo .war, por sso devemos fazer o deploy dele em algum lugar. Para isso, devemos fazer o download e configurar o servidor Tomcat 
+    - Download > unzipar
+    - Setar a variável de ambiente $CATALINA_HOME com o diretorio raiz do tomcat
+    - Rodar o startup.sh/startup.bat localizado no diretório apache-tomcat-8.0.26/bin  (subir o server)
+        sh startup.sh 
+    - acessar http://localhost:8080/ no browser
+    - RESULTADO: Tela do Tomcat
+    - p.s.: Para derrumar o tomcat, rodar no diretorio /bin o comando: (derrubar o server)
+        sh shutdown.sh
+    
+  Jenkins deployment (TODO!!!)
+  - Colocar  arquivo .war do jenkins no diretorio $CATALINA_HOME/webapps/
+  - Restartar o Tomcat:  sh startup.sh 
+  - Acessar http://localhost:8080/ no browser
+  RESULTADO: Jenkins deve estar up e rodando.
+  
+  O OBJETIVO É CRIAR UM JOB PARA CLONAR UM REPOSITÓRIO, RODAR TESTES E PUBLICAR RELATORIOS.
+  
+  Job Configuration (TODO!!!)
+  - Add o plugin do Git
+  
+  consegui criar jobs que não fazerm nada
+  
+    
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+Parei na parte:
+    Then, go to apache-tomcat-8.0.26/bin directory and run startup.sh/startup.bat (if you are having problems running startup script due to lack of execute permissions, just run chmod ug=rwx * inside /bin directory):
+        sh startup.sh
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    http://testdetective.com/jenkins-begginers-dojo/
+    
+    http://www.vogella.com/tutorials/Jenkins/article.html#setting-up-a-jenkins-job
+
+
+
     
 
 
