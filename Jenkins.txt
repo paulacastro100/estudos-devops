@@ -28,10 +28,15 @@ https://developers.openshift.com/managing-your-applications/continuous-integrati
     O comando git push disparará a sequencia BUILD/TEST/DEPLOY no Jenkins.
       Jenkins schedula o build (cria um builder temporário para a plicação)
       Cria-se um Node (aka slave node) do lado Jenkins
-      No OpenShift cria-se um aplication builder correspondente chamado appnamebldr (se já existir, o existente será usado e o build será imediatametne 
-        
+      No OpenShift cria-se um aplication builder correspondente chamado appnamebldr (se já existir, o existente será usado e o build será imediatamente acionado.
+      O node o builder vão consumir uma única Gear que será liberada caso haja 15min de inatividade.
+      
+4) Troubleshooting
+Logs são registrados para indicar problemas duranto do build, teste ou deploy no Jenkins,desde o push no git, e ficam   disponíveis na interface web do Jenkins.
       
      
-        
+REVER: How does a Jenkins build work? 
+    https://developers.openshift.com/managing-your-applications/continuous-integration.html#basic-workflow
+    
 
-4) 
+
