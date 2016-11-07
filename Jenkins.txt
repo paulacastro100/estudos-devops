@@ -1,0 +1,37 @@
+*** OPENSHIFT ********
+
+
+LOGIN igual ao do github
+
+https://openshift.redhat.com/app/login
+
+Para quem não tem docker, usar uma máquina virtual:
+All-In-One Virtual Machine: https://www.openshift.org/vm/
+
+
+TODO:
+Como usar NodeJS no Openshift: https://developers.openshift.com/languages/nodejs/getting-started.html
+
+
+*********************** JENKINS ***************************** 
+Como seria CI com o Jenkins
+https://developers.openshift.com/managing-your-applications/continuous-integration.html#basic-workflow
+1) criar o jenkins 
+    p.s. para usar com o OpenShift é preciso instalar o RHC tools..
+    https://blog.openshift.com/how-to-install-the-openshift-rhc-client-tools-on-windows/
+    
+2) Criar uma aplicação com o Jenkins embarcado (cria um job jenkins específico para esta aplicação)
+
+3) Modificar a aplicação e fazer o PUSH dela 
+    antes disso, mudanças e commits.
+    PUSH -> enviar mudanças para o GitHub ou GitLab
+    O comando git push disparará a sequencia BUILD/TEST/DEPLOY no Jenkins.
+      Jenkins schedula o build (cria um builder temporário para a plicação)
+      Cria-se um Node (aka slave node) do lado Jenkins
+      No OpenShift cria-se um aplication builder correspondente chamado appnamebldr (se já existir, o existente será usado e o build será imediatametne 
+        
+      
+     
+        
+
+4) 
