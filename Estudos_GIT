@@ -127,4 +127,12 @@ TODO:
 ( ) Testar configurar o Git e clonar meu projeto estudos-devops
 	http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
 
+****** 07/11 ******
+
+O que é um FORK
+O Fork, recurso do GitHub, consiste em criar uma cópia independente de um determinado repositório, desta forma, é possível trabalhar em um fork de um projeto, sem que as alterações afetem o projeto original. Esta é a forma utilizada para contribuir em projetos open source.
+Após as alterações serem finalizadas no fork, é possível realizar um pull request no repositório original, com isso o dono do projeto pode tomar a decisão de acoplar ou não as alterações do fork ao projeto original.
+
+
+
 
