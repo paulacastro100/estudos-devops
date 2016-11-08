@@ -1,4 +1,22 @@
 **************** PHANTOM JS NO TRABALHO - CONFIGURAÇAO - 08/11 **********************
+O QUE É:
+É um navegador baseado no WebKit que permite  testar de forma headless, ou seja, sem usar a interface gráfica, o que resulta numa diminuição do tempo dos testes.
+p.s. mas ele não eh um framework de teste. Para isso, olhar o Jasmine.
+
+**Jasmine + PhantomJS**
+Posso executar testes com o Jasmine, frameworkd de testes, mas usar somente o terminal e não precisar ter uma janela do navegador aberta. Para isso, utilizar o PhantomJS. 
+https://ericdouglas.github.io/2014/02/25/06-testando-javascript-com-jasmine-e-karma/
+
+
+  
+
+
+ver exemplos:
+http://phantomjs.org/examples/
+
+
+
+CONFIGURAÇÕES:
 
 Seguindo instruções da equipe Multicanal:
   http://sdap030vt.safra.com.br/reference/guias-multicanal/wikis/DevOps/configuracao-phantomjs.md
@@ -30,6 +48,8 @@ Executar o comando no CMD:
 
 Tentei executar o teste de: http://phantomjs.org/quick-start.html
 R: não funcionou. Erro aplicação Win32 não válida. Access Denied
+
+
 
 **************** PHANTOM JS EM CASA - CONFIGURAÇAO - 08/11 **********************
  TODO
