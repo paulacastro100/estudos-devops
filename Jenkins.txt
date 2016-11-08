@@ -58,7 +58,10 @@ TODO(!!!)
     - Download > unzipar
     - Setar a variável de ambiente $CATALINA_HOME com o diretorio raiz do tomcat
     - Rodar o startup.sh/startup.bat localizado no diretório apache-tomcat-8.0.26/bin  (subir o server)
-        sh startup.sh 
+        startup.sh/startup.bat
+      Depois>
+        startup
+        //old   sh startup.sh 
     - acessar http://localhost:8080/ no browser
     - RESULTADO: Tela do Tomcat
     - p.s.: Para derrumar o tomcat, rodar no diretorio /bin o comando: (derrubar o server)
@@ -87,6 +90,31 @@ Parei na parte:
     http://testdetective.com/jenkins-begginers-dojo/
     
     http://www.vogella.com/tutorials/Jenkins/article.html#setting-up-a-jenkins-job
+
+
+
+*********************** JENKINS EM CASA - 07/11 ***********************
+http://www.klebermota.eti.br/2011/07/07/como-instalar-e-configurar-o-tomcat-no-windows/
+- Jenkins ok
+- Apache Tomcat download e unzip ok
+- Requer JDK -ok
+    Instalar: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html?ssSourceSiteId=otnpt
+- Variaveis de ambiente do java:
+    JAVA_HOME
+    CLASSPATH
+    fonte: http://www.devmedia.com.br/preparacao-do-ambiente-para-desenvolvimento-em-java/25188
+- acessar http://localhost:8080/ no browser
+- colocar o jenkins dentre da pasta apache webapps
+- testar http://localhost:8080 para acessar apache
+- testar http://localhost:8080/jenkins/ para acessar jenkins
+    logar no jenkins
+- criar um job jenkins exatamente como consta no link -  ok
+
+
+    TUDO AQUI OK
+
+- executar job --> rodou mas deu erro.
+
 
 
 
