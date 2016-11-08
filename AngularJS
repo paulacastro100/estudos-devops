@@ -1,0 +1,17 @@
+*************** AngularJS no trabalho - 08/11 ***********************
+
+Testes com spa básica - OK
+  http://matheusazzi.com/single-page-apps/  
+
+Rotas
+Quando você está fazendo uma SPA, normalmente não se endereça rotas no back-end, você apenas cria uma API e cria suas rotas no front-end. Procure sempre trabalhar dessa forma.
+
+
+Sobre controllers:
+ $scope: nada mais é do que um objeto que representa a view do seu controller.
+ O Angular usa o $scope para poder fazer o two-way data binding, imagine o $scope como sendo uma ligação entre sua view (template/html) e seu controller.
+ 
+ ver teste: http://tableless.com.br/criando-uma-aplicacao-single-page-com-angularjs/
+ 
+ http://tableless.com.br/criando-uma-aplicacao-single-page-com-angularjs/
+ http://jsfiddle.net/01te9auh/?utm_source=website&utm_medium=embed&utm_campaign=01te9auh
