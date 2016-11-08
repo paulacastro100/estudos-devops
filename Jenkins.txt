@@ -109,15 +109,22 @@ http://www.klebermota.eti.br/2011/07/07/como-instalar-e-configurar-o-tomcat-no-w
 - testar http://localhost:8080/jenkins/ para acessar jenkins
     logar no jenkins
 - criar um job jenkins exatamente como consta no link -  ok
-
+- PLUGINS OK
 
     TUDO AQUI OK
 
 - executar job --> rodou mas deu erro.
 
 
+*********************** JENKINS NO TRABALHO - 08/11 ***********************
+- Jenkins já ok
+- Apache Tomcat ok
+- Requer JDK ou JRE (já tinha o JRE)
+- Variaveis de ambiente do java:
+    JRE_HOME (não setei JAVA_COME nem CLASSPATH)
+- colocar o jenkins dentre da pasta apache webapps
+- testar http://localhost:8080 para acessar apache
+- testar http://localhost:8080/jenkins/ para acessar jenkins
 
-
-    
-
+- PLUGINS não estão aparecendo => necessário setar HTTP Proxy Configuration (!!!) TODO
 
