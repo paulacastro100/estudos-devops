@@ -1,0 +1,36 @@
+************ Configurando o Source Tree ***************
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TO DO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Instruções do Multicanal
+
+[SourceTree] Como posso configurar o SourceTree sem à Internet
+O SourceTree é um facilitador para interagir com o Git, com interface visual que encapsula os comandos. É recomendado para executar as funções do Gitflow.
+Copiar o arquivo accounts.json para %USERPROFILE%\AppData\Local\Atlassian\SourceTree
+
+  accounts.json:
+  [
+  {
+      "$id": "1",
+	  "$type": "SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity",
+	  "Authenticate": true,
+	  "HostInstance": {
+	     "$id": "2",
+		 "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountInstance, SourceTree.Host.AtlassianAccount",
+		 "Host": {
+		    "$id": "3",
+			"$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountHost, SourceTree.Host.AtlassianAccount",
+			"Id": "atlassian account"
+		 },
+		 "BaseUrl": "https://id.atlassian.com/"
+	  },
+	  "Credentials": {
+	     "$id": "4",
+		 "$type": "SourceTree.Model.BasicAuthCredentials, SourceTree.Api.Account",
+		 "Username": "user@email.com",
+		 "Email": null
+	  },
+	  "IsDefault": false
+  }
+]
+
