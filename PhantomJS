@@ -1,0 +1,35 @@
+**************** PHANTOM JS NO TRABALHO - CONFIGURAÇAO - 08/11 **********************
+
+Seguindo instruções da equipe Multicanal:
+  http://sdap030vt.safra.com.br/reference/guias-multicanal/wikis/DevOps/configuracao-phantomjs.md
+  
+ # ConfiguraÃ§Ã£o do phantomjs
+## Passo 1
+  [Realizar o download do PhantomJS](files/phantomjs.zip)
+  R: http://phantomjs.org/download.html  OK
+
+## Passo 2
+Executa o comando:
+  path=%path%;"C:\phantomjs\bin"
+  R: No meu caso:  
+      path=%path%;"H:\phantomjs-2.1.1-windows\bin"   (usando o arquivo de download do site)
+      path=%path%;"H:\phantomjs\bin"                 (usando o arquivo de download do site)
+  OK
+
+## Passo 3
+Realiza o teste do phantomjs
+Executar o comando no CMD:
+  phantomjs
+  Obs: Usar essa janela do CMD para efeturar os testes de npm.
+
+  R: ERRO: (...) não é uma aplicação Win32 válida. No site fala que "It will run on a fresh install of Windows Vista or later versions."
+
+
+------------------
+
+
+Tentei executar o teste de: http://phantomjs.org/quick-start.html
+R: não funcionou. Erro aplicação Win32 não válida. Access Denied
+
+**************** PHANTOM JS EM CASA - CONFIGURAÇAO - 08/11 **********************
+ TODO
