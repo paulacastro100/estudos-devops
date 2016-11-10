@@ -1,0 +1,47 @@
+JASMINE
+
+https://jasmine.github.io/
+- Framework para desenvolvimento baseado em comportamento
+- Framework de teste
+- é um pacote de helper code p
+
+
+
+
+***************** PROTRACTOR ******************
+Seguindo instruções de: http://www.protractortest.org/#/tutorial
+
+<< SETUP >> 
+  P.S. EXECUTAR COMO ADMIN - VIA CMD DO NODE
+
+  Instalar (This will install two command line tools, protractor and webdriver-manager)
+    npm install -g protractor   (OK)
+
+  Checar a versao
+    protractor version          (OK) 
+
+  Usar o Webdriver-manager para obter uma instancia do Selenium Server rodando. Vamos fazer download dos binarios necessários
+    webdriver-manager update    (OK)
+
+  Iniciar o Selenium Server:
+    webdriver-manager start     (OK)
+
+  Ver status do Selenium Server no browser
+    http://localhost:4444/wd/hub    (OK)
+    
+   Ps. tive de rodar novamente o install do Protractor pois node_modules\ nao continha protractor...
+   (OK)
+   
+   Para ver os packages instalados no nodes:
+   npm list
+   
+   
+    
+<< COMO FUNCIONA >>
+- Protractor needs two files to run, a spec file and a configuration file.
+
+<< TESTE 0 >>>
+
+Criei spec.js e config.js
+Executar:
+  protractor conf.js
