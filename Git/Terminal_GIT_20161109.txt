@@ -1,0 +1,347 @@
+﻿
+Paula@pc-paula MINGW64 ~ (master)
+$ cd documents
+
+Paula@pc-paula MINGW64 ~/documents (master)
+$ cd 2016/github
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ ls
+estudos-nodejs/      grit/       nodejs/           README.md
+estudos-protractor/  MeuNodeJS/  NodeJS_20161103/  Terminal_Git_20161018.doc
+exemplo1.git/        mygrit/     ola-mundo/        Teste.txt
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ cd estudos-protractr
+bash: cd: estudos-protractr: No such file or directory
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ cd estudos-protractor
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git init
+Initialized empty Git repository in C:/Users/Paula/documents/2016/GitHub/estudo-protractor/.git/
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git remote
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git remote add Protractor https://github.com/paulacastro100/estudos-devops/
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git remote -v
+Protractor      https://github.com/paulacastro100/estudos-devops/ (fetch)
+Protractor      https://github.com/paulacastro100/estudos-devops/ (push)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git fetch Protractor
+remote: Counting objects: 57, done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 57 (delta 15), reused 0 (delta 0), pack-reused 24
+Unpacking objects: 100% (57/57), done.
+From https://github.com/paulacastro100/estudos-devops
+ * [new branch]      master     -> Protractor/master
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git remote -v
+Protractor      https://github.com/paulacastro100/estudos-devops/ (fetch)
+Protractor      https://github.com/paulacastro100/estudos-devops/ (push)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git remote
+Protractor
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git remote -v
+Protractor      https://github.com/paulacastro100/estudos-devops/ (fetch)
+Protractor      https://github.com/paulacastro100/estudos-devops/ (push)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git fetch Protractor
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/paulacastro100/estudos-devops
+   7d9bee3..cf49228  master     -> Protractor/master
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git push Protractor master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/paulacastro100/estudos-dvops/'
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ git push Protractor Protractor
+error: src refspec Protractor does not match any.
+error: failed to push some refs to 'https://github.com/paulacastro100/estudos-dvops/'
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-protractor (master)
+$ cd ..
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ dir
+estudos-nodejs      grit       nodejs           README.md
+estudos-protractor  MeuNodeJS  NodeJS_20161103  Terminal_Git_20161018.doc
+exemplo1.git        mygrit     ola-mundo        Teste.txt
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ git clone  git://github.com/paulacastro100/estudos-devops
+Cloning into 'estudos-devops'...
+remote: Counting objects: 60, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 60 (delta 16), reused 0 (delta 0), pack-reused 24
+Receiving objects: 100% (60/60), 18.40 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (19/19), done.
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        MeuNodeJS/
+        NodeJS_20161103/
+        Terminal_Git_20161018.doc
+        estudos-devops/
+        estudos-nodejs/
+        estudos-protractor/
+        exemplo1.git/
+        grit/
+        mygrit/
+        nodejs/
+        ola-mundo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ cd estudos_de*
+bash: cd: estudos_de*: No such file or directory
+
+Paula@pc-paula MINGW64 ~/documents/2016/github (master)
+$ cd  estudos-devops
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git statusu
+git: 'statusu' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Protractor/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git commit -a -m "subindo arquivos do protractor
+> "
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+        Protractor/
+
+nothing added to commit but untracked files present
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Protractor/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git commit -a -m "subindo arquivos do protractor"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+        Protractor/
+
+nothing added to commit but untracked files present
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git add .
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Protractor/conf.js
+        new file:   Protractor/spec.js
+
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git commit -m "testes com o protractor"
+[master 02a9da5] testes com o protractor
+ 2 files changed, 21 insertions(+)
+ create mode 100644 Protractor/conf.js
+ create mode 100644 Protractor/spec.js
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ dir
+AngularJS                  Estudos_GIT  Protractor      SourceTree
+ContinuousDelivery.TXT     Jenkins.txt  Protractor.txt
+ContinuousIntegration.txt  PhantomJS    README.md
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ notepad
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ notepad EStudos_GIT
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git push
+fatal: remote error:
+  You can't push to git://github.com/paulacastro100/estudos-devops.git
+  Use https://github.com/paulacastro100/estudos-devops.git
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git remote
+origin
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git remote -v
+origin  git://github.com/paulacastro100/estudos-devops (fetch)
+origin  git://github.com/paulacastro100/estudos-devops (push)
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git push origin https://github.com/paulacastro100/estudos-devops.git
+fatal: remote part of refspec is not a valid name in https://github.com/paulacastro100/estudos-devops.git
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git push origin master
+fatal: remote error:
+  You can't push to git://github.com/paulacastro100/estudos-devops.git
+  Use https://github.com/paulacastro100/estudos-devops.git
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git fetch
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git push origin master
+fatal: remote error:
+  You can't push to git://github.com/paulacastro100/estudos-devops.git
+  Use https://github.com/paulacastro100/estudos-devops.git
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git remove
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+        remote
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git remote
+origin
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ git remote origin
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ cd protractor
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops/protractor (master)
+$ git remote origin
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops/protractor (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops/protractor (master)
+$ git push
+fatal: remote error:
+  You can't push to git://github.com/paulacastro100/estudos-devops.git
+  Use https://github.com/paulacastro100/estudos-devops.git
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops/protractor (master)
+$ git push ^C
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops/protractor (master)
+$ git push https://github.com/paulacastro100/estudos-devops.git
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 748 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/paulacastro100/estudos-devops.git
+   cf49228..02a9da5  master -> master
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops/protractor (master)
+$ cd ..
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ vim
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ notepad estudos_git
+
+
+Paula@pc-paula MINGW64 ~/documents/2016/github/estudos-devops (master)
+$ notepad estudos_git

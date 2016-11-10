@@ -1,4 +1,4 @@
-http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
+﻿http://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
 
 PENDENTE - Testar clonar meu projeto meu-site no git da minha maquina
 
@@ -134,5 +134,25 @@ O Fork, recurso do GitHub, consiste em criar uma cópia independente de um deter
 Após as alterações serem finalizadas no fork, é possível realizar um pull request no repositório original, com isso o dono do projeto pode tomar a decisão de acoplar ou não as alterações do fork ao projeto original.
 
 
+
+**09/11**
+
+Comandos rahttps://git-scm.com/book/pt-br/v1/Git-Essencial-Trabalhando-com-Remotos
+Trazer o remoto para local
+  $ git clone  https://github.com/paulacastro100/estudos-devops.git
+
+Fazer edições locais
+
+Adicionar as changes realizadas
+  $ git add . 	=> adiciona tudo o que foi alterado daquele diretorio para a frente
+
+Ver o status das changes:
+  $ git status
+
+Commitar changes:
+  $ git commit -m "testes com o protractor"
+
+Enviar para o repositorio remoto:
+  $ git push https://github.com/paulacastro100/estudos-devops.git
 
 

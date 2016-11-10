@@ -1,0 +1,175 @@
+Your environment has been set up for using Node.js 4.2.4 (x64) and npm.
+
+C:\Users\Paula>cd ..
+
+C:\Users>cd ..
+
+C:\>cd program*
+
+C:\Program Files>cd nod*
+
+C:\Program Files\nodejs>cd nodemo
+O sistema não pode encontrar o caminho especificado.
+
+C:\Program Files\nodejs>cd nodemo*
+A sintaxe do nome do arquivo, do nome do diretório ou do rótulo do volume está incorreta.
+
+C:\Program Files\nodejs>dir
+ O volume na unidade C é OS
+ O Número de Série do Volume é BEFC-BF80
+
+ Pasta de C:\Program Files\nodejs
+
+08/01/2016  01:48    <DIR>          .
+08/01/2016  01:48    <DIR>          ..
+23/12/2015  16:58        14.146.200 node.exe
+15/12/2015  19:38               700 nodevars.bat
+15/12/2015  19:38             6.612 node_etw_provider.man
+08/01/2016  01:48    <DIR>          node_modules
+15/12/2015  19:38             4.974 node_perfctr_provider.man
+21/12/2015  23:17               623 npm
+21/12/2015  23:17               483 npm.cmd
+               6 arquivo(s)     14.159.592 bytes
+               3 pasta(s)   350.457.810.944 bytes disponíveis
+
+C:\Program Files\nodejs>cd node_modules
+
+C:\Program Files\nodejs\node_modules> /protractor/bin/webdriver-manager update
+O sistema não pode encontrar o caminho especificado.
+
+C:\Program Files\nodejs\node_modules>cd /protractor
+O sistema não pode encontrar o caminho especificado.
+
+C:\Program Files\nodejs\node_modules>dir
+ O volume na unidade C é OS
+ O Número de Série do Volume é BEFC-BF80
+
+ Pasta de C:\Program Files\nodejs\node_modules
+
+08/01/2016  01:48    <DIR>          .
+08/01/2016  01:48    <DIR>          ..
+08/01/2016  01:48    <DIR>          npm
+               0 arquivo(s)              0 bytes
+               3 pasta(s)   350.430.556.160 bytes disponíveis
+
+C:\Program Files\nodejs\node_modules>cd npm
+
+C:\Program Files\nodejs\node_modules\npm>dir
+ O volume na unidade C é OS
+ O Número de Série do Volume é BEFC-BF80
+
+ Pasta de C:\Program Files\nodejs\node_modules\npm
+
+08/01/2016  01:48    <DIR>          .
+08/01/2016  01:48    <DIR>          ..
+18/12/2015  05:26             2.294 .mailmap
+15/12/2015  19:38               519 .npmignore
+21/12/2015  23:17               344 .travis.yml
+21/12/2015  23:17            12.012 AUTHORS
+08/01/2016  01:48    <DIR>          bin
+21/12/2015  23:17           262.095 CHANGELOG.md
+18/12/2015  05:26                50 cli.js
+15/12/2015  19:38               554 configure
+15/12/2015  19:38               515 CONTRIBUTING.md
+08/01/2016  01:48    <DIR>          doc
+08/01/2016  01:48    <DIR>          html
+08/01/2016  01:48    <DIR>          lib
+21/12/2015  23:17            12.159 LICENSE
+15/12/2015  19:38               159 make.bat
+21/12/2015  23:17             5.559 Makefile
+08/01/2016  01:48    <DIR>          man
+08/01/2016  01:48    <DIR>          node_modules
+15/12/2015  19:38                23 npmrc
+21/12/2015  23:17             5.025 package.json
+21/12/2015  23:17             7.972 README.md
+08/01/2016  01:48    <DIR>          scripts
+08/01/2016  01:48    <DIR>          test
+15/12/2015  19:38               668 wercker.yml
+              15 arquivo(s)        309.948 bytes
+              10 pasta(s)   350.430.752.768 bytes disponíveis
+
+C:\Program Files\nodejs\node_modules\npm>cd node*
+
+C:\Program Files\nodejs\node_modules\npm\node_modules>dir
+ O volume na unidade C é OS
+ O Número de Série do Volume é BEFC-BF80
+
+ Pasta de C:\Program Files\nodejs\node_modules\npm\node_modules
+
+08/01/2016  01:48    <DIR>          .
+08/01/2016  01:48    <DIR>          ..
+08/01/2016  01:48    <DIR>          abbrev
+08/01/2016  01:48    <DIR>          ansi
+08/01/2016  01:48    <DIR>          ansi-regex
+08/01/2016  01:48    <DIR>          ansicolors
+08/01/2016  01:48    <DIR>          ansistyles
+08/01/2016  01:48    <DIR>          archy
+08/01/2016  01:48    <DIR>          async-some
+08/01/2016  01:48    <DIR>          block-stream
+08/01/2016  01:48    <DIR>          char-spinner
+08/01/2016  01:48    <DIR>          chmodr
+08/01/2016  01:48    <DIR>          chownr
+08/01/2016  01:48    <DIR>          cmd-shim
+08/01/2016  01:48    <DIR>          columnify
+08/01/2016  01:48    <DIR>          config-chain
+08/01/2016  01:48    <DIR>          dezalgo
+08/01/2016  01:48    <DIR>          editor
+08/01/2016  01:48    <DIR>          fs-vacuum
+08/01/2016  01:48    <DIR>          fs-write-stream-atomic
+08/01/2016  01:48    <DIR>          fstream
+08/01/2016  01:48    <DIR>          fstream-npm
+08/01/2016  01:48    <DIR>          github-url-from-git
+08/01/2016  01:48    <DIR>          github-url-from-username-repo
+08/01/2016  01:48    <DIR>          glob
+08/01/2016  01:48    <DIR>          graceful-fs
+08/01/2016  01:48    <DIR>          hosted-git-info
+08/01/2016  01:48    <DIR>          inflight
+08/01/2016  01:48    <DIR>          inherits
+08/01/2016  01:48    <DIR>          ini
+08/01/2016  01:48    <DIR>          init-package-json
+08/01/2016  01:48    <DIR>          lockfile
+08/01/2016  01:48    <DIR>          lru-cache
+08/01/2016  01:48    <DIR>          minimatch
+08/01/2016  01:48    <DIR>          mkdirp
+08/01/2016  01:48    <DIR>          node-gyp
+08/01/2016  01:48    <DIR>          nopt
+08/01/2016  01:48    <DIR>          normalize-git-url
+08/01/2016  01:48    <DIR>          normalize-package-data
+08/01/2016  01:48    <DIR>          npm-cache-filename
+08/01/2016  01:48    <DIR>          npm-install-checks
+08/01/2016  01:48    <DIR>          npm-package-arg
+08/01/2016  01:48    <DIR>          npm-registry-client
+08/01/2016  01:48    <DIR>          npm-user-validate
+08/01/2016  01:48    <DIR>          npmlog
+08/01/2016  01:48    <DIR>          once
+08/01/2016  01:48    <DIR>          opener
+08/01/2016  01:48    <DIR>          osenv
+08/01/2016  01:48    <DIR>          path-is-inside
+08/01/2016  01:48    <DIR>          read
+08/01/2016  01:48    <DIR>          read-installed
+08/01/2016  01:48    <DIR>          read-package-json
+08/01/2016  01:48    <DIR>          readable-stream
+08/01/2016  01:48    <DIR>          realize-package-specifier
+08/01/2016  01:48    <DIR>          request
+08/01/2016  01:48    <DIR>          retry
+08/01/2016  01:48    <DIR>          rimraf
+08/01/2016  01:48    <DIR>          semver
+08/01/2016  01:48    <DIR>          sha
+08/01/2016  01:48    <DIR>          slide
+08/01/2016  01:48    <DIR>          sorted-object
+08/01/2016  01:48    <DIR>          spdx
+08/01/2016  01:48    <DIR>          spdx-license-ids
+08/01/2016  01:48    <DIR>          strip-ansi
+08/01/2016  01:48    <DIR>          tar
+08/01/2016  01:48    <DIR>          text-table
+08/01/2016  01:48    <DIR>          uid-number
+08/01/2016  01:48    <DIR>          umask
+08/01/2016  01:48    <DIR>          validate-npm-package-license
+08/01/2016  01:48    <DIR>          validate-npm-package-name
+08/01/2016  01:48    <DIR>          which
+08/01/2016  01:48    <DIR>          wrappy
+08/01/2016  01:48    <DIR>          write-file-atomic
+               0 arquivo(s)              0 bytes
+              73 pasta(s)   350.430.752.768 bytes disponíveis
+
+C:\Program Files\nodejs\node_modules\npm\node_modules>
