@@ -128,3 +128,10 @@ http://www.klebermota.eti.br/2011/07/07/como-instalar-e-configurar-o-tomcat-no-w
 
 - PLUGINS não estão aparecendo => necessário setar HTTP Proxy Configuration (!!!) TODO
 
+
+
+*********************** JENKINS EM CASA - 14/11 ***********************
+Para subir o jenkins:
+- rodar o comando startup no cmd normal, pasta apache\bin
+- acessar http://localhost:8080 para testar apache up
+- acessar http://localhost:8080/jenkins/  para testar jenkins up
