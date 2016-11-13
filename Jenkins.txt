@@ -135,3 +135,9 @@ Para subir o jenkins:
 - rodar o comando startup no cmd normal, pasta apache\bin
 - acessar http://localhost:8080 para testar apache up
 - acessar http://localhost:8080/jenkins/  para testar jenkins up
+
+
+Exemplo OK
+Criei um job que a cada 2 min checa alterações no git e, se houver, executa um script.
+O objetivo é rodar um java script via node.
+Fonte: https://www.youtube.com/watch?v=_A32nj7aKzs&index=4&list=PL3EuFy3x9CgACt4GE7lC7GZjf6yJe6XHX
