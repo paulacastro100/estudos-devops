@@ -1,0 +1,74 @@
+
+**** Getting started with Vagrant *****
+Fonte: https://www.vagrantup.com/intro/getting-started/index.html
+
+- baixar o vagrant e instalá-lo (https://www.vagrantup.com/downloads.html)
+Ex. vagrant_1.9.7_x86_64.msi
+
+- no prompt (git bash ou cmd ou prompt node), checar a versão do vagrant
+$ vagrant -v
+
+- listar boxes
+$ vagrant box list
+
+- inicializar um box de ubuntu precise64
+$ vagrant init hashicorp/precise64
+
+- subir o box
+$ vagrant up
+
+- acessar a máquina
+$ vagrant ssh
+
+  - sair da maquina
+  $ logout
+
+************* INSTALANDO O DOCKER NA VM **********************8
+Fontes:
+https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-from-a-package
+https://askubuntu.com/questions/856493/install-docker-on-ubuntu-16-04-problem-with-linux-image-extra
+
+- Remover docker existentes, se houver
+$ sudo apt-get remove docker docker-engine docker.io
+
+$ sudo apt-get update
+
+$ sudo apt-get install \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+    
+- Setup do repositorio
+$ sudo apt-get update
+
+- Instalar os pacotes para permitir que o apt use https
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
+- Add a gpg key oficial do docker
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+- Confirmar que existe o fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
+$ sudo apt-key fingerprint 
+
+(...)
+
+- Instalacao a partir do .deb -------------------------------------
+$ sudo curl https://apt.dockerproject.org/repo/pool/testing/t/docker-engine/docker-engine_1.10.0~rc1-0~precise_amd64.deb > docker-engine.deb
+% sudo dpkg -i docker-engine.deb
+
+- Usando o docker -------------------------------------------------
+Executar como sudo
+$ docker ps -a 
+$ docker run hello-world
+
+$ docker run --name meu-mongo -d mongo
+$ docker exec -it meu-mongo bash
+   
+$ docker run --name confluence -d atlassian/confluence-server
+
+
+
+
