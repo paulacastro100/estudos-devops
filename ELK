@@ -9,3 +9,93 @@ Elastic:
 
 Baixar a versao 5.4.3
 https://www.elastic.co/downloads/past-releases
+
+
+https://stackoverflow.com/questions/37596487/logstash-reads-data-from-stdin-but-not-from-file
+https://discuss.elastic.co/t/custom-grok-patterns-not-work/82727
+https://www.elastic.co/guide/en/logstash/5.2/plugins-filters-grok.html
+https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
+https://grokdebug.herokuapp.com/patterns#
+https://grokdebug.herokuapp.com/
+https://regexr.com/
+http://www.regular-expressions.info/characters.html
+http://www.regular-expressions.info/repeat.html
+https://www.elastic.co/blog/do-you-grok-grok
+https://stackoverflow.com/questions/29341715/understanding-how-elasticsearch-stores-dates-internally
+https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html
+https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html#plugins-filters-grok-pattern_definitions
+https://stackoverflow.com/questions/42649968/grok-filtering-in-logstash-for-multiple-defined-patterns
+https://www.udemy.com/elasticsearch-and-kibana/
+https://discuss.elastic.co/t/how-to-replace-special-characters-with-a-logstash-filter/28240
+
+______________________________________________________________________
+
+{"time":"20/01/2005T10:02:03:19.222", "gmt":"+12"}
+    "timestampFINAL" => "20/01/2005T10:02:03:19.222 +1200"
+{"time":"20/01/2005T10:02:03:19.222", "gmt":"+3"}
+    "timestampFINAL" => "20/01/2005T10:02:03:19.222 +0300"
+{"time":"20/01/2005T10:02:03:19.222", "gmt":"+1"}
+    "timestampFINAL" => "20/01/2005T10:02:03:19.222 +1"
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+input { 
+	stdin {  } 
+
+	#file {
+		#{"time":"20/01/2005T10:02:03:19.222", "gmt":"+3"}
+	#	path => "C:\logstash-5.4.3\logstash-5.4.3\bin\input.log"
+	#	start_position => "beginning"
+    #}
+}	
+	
+filter {
+
+	json{
+		source => "message"
+		target => "doc_json"
+	}
+
+	if [doc_json][time] {
+		mutate {
+			add_field => { "time" => "%{[doc_json][time]}"}
+		}
+	}
+	
+	if [doc_json][gmt] {
+		 mutate {
+		 	add_field => { "gmtFINAL" => "%{[doc_json][gmt]}"}
+		 }
+		#grok {
+		#	match => {"gmt" => "%{POSINT:gmt_numero}" }
+		#	add_field => { "gmt_novo" => "%[gmt]" }
+		#		
+		#	
+		#}
+		
+		mutate {
+			gsub => [
+				"gmtFINAL", "12", "1200",
+				"gmtFINAL", "11", "1100",
+				"gmtFINAL", "10", "1000",
+				"gmtFINAL", "9", "0900",
+				"gmtFINAL", "8", "0800",
+				"gmtFINAL", "7", "0700",
+				"gmtFINAL", "6", "0600", 
+				"gmtFINAL", "5", "0500",
+				"gmtFINAL", "4", "0400",
+				"gmtFINAL", "3", "0300"
+				#"gmtFINAL", "2", "0200",		nao funciona
+				#"gmtFINAL", "1", "0100"		nao funciona
+			]
+		}
+		mutate {
+			add_field => { "timestampFINAL" => "%{[time]} %{[gmtFINAL]}"}
+		}
+	}	
+}
+
+output {
+	stdout { codec => rubydebug }
+}
