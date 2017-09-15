@@ -1,0 +1,11 @@
+Logstash:
+Baixar a versao 5.4.3
+https://www.elastic.co/downloads/past-releases
+
+https://www.elastic.co/guide/en/logstash/5.4/getting-started-with-logstash.html
+$ logstash -e 'input { stdin { } } output { stdout {} }'
+
+Elastic: 
+
+Baixar a versao 5.4.3
+https://www.elastic.co/downloads/past-releases
