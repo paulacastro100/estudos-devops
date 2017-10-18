@@ -15,13 +15,13 @@ RUN MONGO
 $ docker run --name my-mongo -d mongo
 
 CONNECT VIA MONGO
-$ docker run -it --link my-mongo:mongo --rm mongo sh -c 'exec mongo "$MONGO_PORT_27017_TCP_ADDR:$MONGO_PORT_27017_TCP_PORT/test"'
+$ docker run -it --link mongo:mongo --rm mongo sh -c 'exec mongo "$MONGO_PORT_27017_TCP_ADDR:$MONGO_PORT_27017_TCP_PORT/test"'
 	
 	TESTES DENTRO DO MONGO
 	$ show dbs
 	$ db.novaColecao.insertOne({"nome": "Paula"})
 	$ db.novaColecao.findOne()
-	
+		
 	fonte: https://docs.mongodb.com/manual/reference/mongo-shell/
 	
 	ADD THE INITIAL ADMIN USER
@@ -40,6 +40,45 @@ $ openssl rand -base64 741 > mongodb-keyfile
 $ chmod 600 mongodb-keyfile
 $ chown 999 mongodb-keyfile
 
-$ docker run --name mongo -v /opt/mongo/data:/data/db -v /opt/mongo:/opt/keyfile --hostname="node1" -p 27017:27017 -d mongo --smallfiles
+
 
 CONTINUA...
+
+SUBINDO O MONGO
+$ docker run --name mongo -v /opt/mongo/data:/data/db -v /opt/mongo:/opt/keyfile --hostname="node1" -p 27017:27017 -d mongo --smallfiles
+
+ACESSAR O MONGO:
+$ docker run -it --link mongo:mongo --rm mongo sh -c 'exec mongo "$MONGO_PORT_27017_TCP_ADDR:$MONGO_PORT_27017_TCP_PORT/test"'
+
+	CRIAR USUARIOS
+	
+	> db.createUser({
+	... user: "admin",
+	... pwd: "admin",
+	... roles: [{ role: "userAdminAnyDatabase", db: "admin"}]
+	... });
+
+	> db.createUser({                                   
+	... user: "root",                                   
+	... pwd: "root",                                    
+	... roles: [{ role: "root", db: "admin"}]           
+	... });                                             
+
+REMOVER O MONGO CRIADO
+$ docker stop mongo
+$ docker rm mongo
+
+
+(...CONTINUA...)
+
+NOVO TUTORIAL
+
+Fonte: http://www.sohamkamani.com/blog/2016/06/30/docker-mongo-replica-set/
+
+$ docker run -p 30001:27017 --name mongo1 --net my-mongo-cluster mongo mongod --replSet my-mongo-set
+$ docker run -p 30002:27017 --name mongo2 --net my-mongo-cluster mongo mongod --replSet my-mongo-set
+$ docker run -p 30003:27017 --name mongo3 --net my-mongo-cluster mongo mongod --replSet my-mongo-set
+
+
+
+
