@@ -20,3 +20,9 @@ server.get(/api/, function(req, res){
 //SUBINDO O SERVIDOR
 
 server.listen(3000, () => console.log('Executando...'))
+
+
+//ROTEIRO
+//1) Chamar no browser http://localhost:3000/ => Index
+//2) Chamar no browser http://localhost:3000/teste => Teste
+//3) Chamar no browser http://localhost:3000/api => API

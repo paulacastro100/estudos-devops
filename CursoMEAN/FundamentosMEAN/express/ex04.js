@@ -13,3 +13,7 @@ server.route('/clientes')
 
 
 server.listen(3000, () => console.log('Executando...'))
+
+//ROTEIRO
+//1) alt + r para rodar
+//2) chamar no postman os metodos abaixo e  verif msg response

@@ -2,6 +2,9 @@ const express = require('express')
 const server = express()
 const router = require('./ex05_routes')
 
+
+
+//PARA EXECUTAR -> ALT + R
 //ROUTER E PASSAGEM DE PARAMETROS PARA A ROTA //////////////////////////////////////////
 
 //aqui o router é uma funcao middleware

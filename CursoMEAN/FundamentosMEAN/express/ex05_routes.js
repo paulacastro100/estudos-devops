@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router() //criando uma instancia do router
 
 //ROUTER E PASSAGEM DE PARAMETROS PARA A ROTA//////////////////////////////////////////
 
@@ -10,6 +10,7 @@ const router = express.Router()
 
 //MIDDLEWARE COM PARAMETROS E FUNCAO ARROW
 //este middleware será usado para todas as requisicoes
+//calcula o tempo da reuisicao
 router.use(function (req, res, next) {
   const init = Date.now()
   next()
