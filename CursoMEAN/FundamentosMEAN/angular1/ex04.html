@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html ng-app='app'>
+  <!--em que tag eu quero colocar minha aplicação? colocar a diretiva ngapp-->
+  <!--ng-app é uma propriedade personalizada-->
+  <!-- quero que  o angular controle todo o html-->
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+
+      angular.module('app', []) //nome module e dependencias []
+
+        //CRIANDO UM CONTROLLER
+        angular.module('app').controller('MeuController', [
+          //COMO LIGAR O CONTEUDO DA PAGINA COM O CONTEUDO DO CONTROLLER SEM USAR O SCOPE?
+          function(){ //depois a funcao com os parametros que sao as injecoes a serem passados ao controller
+            const self = this //this é a propria funcao
+            self.value = 10 //variavel'
+            self.inc = function(){ //funcao
+              self.value++
+            }
+          }
+        ])
+    </script>
+  </head>
+  <body>
+<!--preciso dizer que esta div é controlada pelo controller x e indicar um alias, ja que nao to usando o scope-->
+  <div ng-controller="MeuController as ctrl">
+    <h1>{{ ctrl.value }}</h1>
+    <input ng-model="ctrl.value" />
+    <button ng-click="ctrl.inc()">Incrementar</button>
+
+  </div>
+  </body>
+</html>

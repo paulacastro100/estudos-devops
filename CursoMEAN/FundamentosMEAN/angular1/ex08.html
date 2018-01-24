@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- USANDO DIRETIVAS ---------------->
+<html ng-app='app'>
+  <!--ng-app é uma diretiva que indica qual parte do html o angular vai controlar -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+
+      angular.module('app', []) //nome module e dependencias []
+
+      //DIRETIVA
+      angular.module('app').directive('meuRelogio', function(){
+        return {
+          restrict: 'AE', //eh um atributo e um elemento
+          template: `<h2>${new Date}<h2>`
+        }
+      })
+
+    </script>
+  </head>
+  <body>
+
+    <h1>Atributo</h1>
+    <div meu-relogio></div>
+    <!--criei uma diretiva como atributo-->
+
+    <h1>Elemento</h1>
+    <meu-relogio></meu-relogio>
+    <!--criei uma diretiva como elemento-->
+
+  </body>
+</html>

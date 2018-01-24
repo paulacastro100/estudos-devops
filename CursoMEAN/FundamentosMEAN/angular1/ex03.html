@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <!--em que tag eu quero colocar minha aplicação? colocar a diretiva ngapp-->
+  <!--ng-app é uma propriedade personalizada-->
+  <!-- quero que  o angular controle todo o html-->
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+      angular.module('app', []) //nome module e dependencias []
+        //CRIANDO UM CONTROLLER
+        angular.module('app').controller('MeuController', [
+          //INJECAO DE DEPENDENCIAS
+          '$scope', //primeiro vem o que quero injetar
+          function($scope){ //depois a funcao com os parametros que sao as injecoes a serem passados ao controller
+            //escopo é um intermediario entre a view e o CONTROLLER
+            //view = DOM
+            //controller =
+            //o angular cria um objeto scope novo e posso colocar minhas variaveis nele.
+            $scope.value = 10 //variavel'
+            $scope.inc = function(){ //funcao
+              $scope.value++
+            }
+
+          }
+        ])
+    </script>
+  </head>
+  <body>
+
+<!--preciso dizer que esta div é controlada pelo controller x-->
+  <div ng-controller="MeuController">
+    <h1>{{ value }}</h1>
+    <!--nao preciso falar scope.vale pois ja pega o scope corrente. -->
+
+    <input ng-model="value" />
+    <button ng-click="inc()">Incrementar</button>
+
+  </div>
+  </body>
+</html>

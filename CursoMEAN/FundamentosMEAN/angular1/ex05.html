@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--APLICANDO FILTOROS / MODIFICADORA ---------------->
+<html ng-app='app'>
+  <!--ng-app é uma diretiva que indica qual parte do html o angular vai controlar -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+
+      angular.module('app', []) //nome module e dependencias []
+
+      //CRIANDO UMA FUNCAO (RECEBE UM INPUT E DEVOLVE MODIFICADO)
+      angular.module('app').filter('upper', function() {
+        return function(input) {
+          return input.toUpperCase()
+        }
+      })
+
+      // CONTROLLER
+      angular.module('app').controller('MeuController', [
+          function(){
+            const self = this //this é a propria funcao
+            self.value = "texto"
+          }
+        ])
+    </script>
+  </head>
+  <body>
+
+  <!--preciso dizer que esta div é controlada pelo controller x e indicar um alias, ja que nao to usando o scope-->
+  <div ng-controller="MeuController as ctrl">
+
+    <!--APLICANDO O FILTRO-->
+    <h1>{{ ctrl.value | upper }}</h1>
+
+    <input ng-model="ctrl.value" />
+
+  </div>
+  </body>
+</html>

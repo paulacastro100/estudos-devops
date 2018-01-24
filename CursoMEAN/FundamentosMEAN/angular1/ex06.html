@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- USANDO FACTORIES ---------------->
+<!-- R: Factory é um padrao de projeto que constroi um objeto ---------------->
+<html ng-app='app'>
+  <!--ng-app é uma diretiva que indica qual parte do html o angular vai controlar -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+
+      angular.module('app', []) //nome module e dependencias []
+
+      //FACTORY que converte um texto em MAIUSCULO
+      angular.module('app').factory('utils', function(){
+          function upper(input) {
+            return input.toUpperCase()
+          }
+          //retorno um objeto pois eh o que o padrao factory preve
+          return { upper } //forma reduzida de criar o objeto
+      })
+
+      //CONTROLLER
+      angular.module('app').controller('MeuController', [
+        'utils', //o que vou injetar
+        function(utils) { //passo as dependencias como parametros
+          const self = this
+          self.value = utils.upper("texto")
+        }
+      ])
+
+    </script>
+  </head>
+  <body>
+
+    <!--preciso dizer que esta div é controlada pelo controller x e indicar um alias, ja que nao to usando o scope-->
+    <div ng-controller="MeuController as ctrl">
+      <h1> {{ ctrl.value}} </h1>
+    </div>
+
+  </body>
+</html>

@@ -9,7 +9,8 @@ const http = require('http')
 //que recebe como parametro uma funcao callback que vai ser
 //chamada quando esta requisicao acontecer
 const server = http.createServer(function(req, res){
-  res.writeHead(200, {"Content-Type": "text/html"})
+  res.writeHead(200, {"Content-Type": "text/html", "teste": "meuTeste"})
+  
   res.end('<h1> Acho que é melhor usar o Express, não? </h1>')
 })
 
@@ -18,3 +19,6 @@ const porta = 3456
 server.listen(porta, function(){
   console.log(`Escutando a ${porta}`)
 })
+
+
+//abrir no browser localhost:3456

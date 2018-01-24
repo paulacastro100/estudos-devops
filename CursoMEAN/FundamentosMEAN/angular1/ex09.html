@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- USANDO COMPONENTES ---------------->
+<html ng-app='app'>
+  <!--ng-app é uma diretiva que indica qual parte do html o angular vai controlar -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+
+      angular.module('app', []) //nome module e dependencias []
+
+      //CRIACAO DO COMPONENTE
+      angular.module('app').component('field', {
+        bindings: {
+          id: '@', //@ significa um texto
+          label: '@',
+          model: '@' //se passo @, aparece como string
+        },
+        template: `
+          <label for="{{ $ctrl.id }}">{{ $ctrl.label }}</label>
+          <input id="{{ $ctrl.id }}" ng-model='$ctrl.model'>
+          `
+
+      })
+
+      //CRIACAO DO CONTROLLER
+      angular.module('app').controller('MeuController', function() {
+        const self = this
+        self.name = "Anonimo"
+      })
+
+    </script>
+  </head>
+  <body>
+    <div ng-controller="MeuController as ctrl">
+      <h1>OLA {{ ctrl.name }}</h1>
+      <field id="nome" label="Nome" model="ctrl.name"></field>
+    </div>
+  </body>
+</html>

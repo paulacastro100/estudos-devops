@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- USANDO SERVICES ---------------->
+<!-- R: Service devolve uma funcao/singleton  ---------------->
+<html ng-app='app'>
+  <!--ng-app é uma diretiva que indica qual parte do html o angular vai controlar -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+
+      angular.module('app', []) //nome module e dependencias []
+
+      //SERVICE retorna uma funcao/singleton
+      angular.module('app').service('utils', function(){
+          this.upper = function(input) {
+            return input.toUpperCase()
+          } //o angular instancia a funcao com um singleton
+          //para a funcao ficar visivel preciso usar o this
+      })
+
+      //CONTROLLER (não muda)
+      angular.module('app').controller('MeuController', [
+        'utils', //o que vou injetar
+        function(utils) { //passo as dependencias como parametros
+          const self = this
+          self.value = utils.upper("texto")
+        }
+      ])
+
+    </script>
+  </head>
+  <body>
+
+    <!--preciso dizer que esta div é controlada pelo controller x e indicar um alias, ja que nao to usando o scope-->
+    <div ng-controller="MeuController as ctrl">
+      <h1> {{ ctrl.value}} </h1>
+    </div>
+
+  </body>
+</html>

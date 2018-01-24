@@ -31,5 +31,5 @@ server.listen(3000, () => console.log('Executando...'))
 
 
 //ROTEIRO (alt + r para rodar)
-//1) Chamar no browser http://localhost:3000/apiX
+//1) Chamar no browser http://localhost:3000/api
 //2) olhar na console a ordem de execucao

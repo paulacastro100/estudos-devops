@@ -10,6 +10,8 @@ const router = require('./ex05_routes')
 //aqui o router é uma funcao middleware
 server.use('/api', router)
 //ex.: /api/clientes/9033
+//ex.:http://localhost:3000/api/clientes/1/marcos
+//ex.:http://localhost:3000/api/clientes/1/marcos
 
 //SUBINDO O SERVIDOR
 server.listen(3000, () => console.log('Executando...'))

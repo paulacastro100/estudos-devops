@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <!--em que tag eu quero colocar minha aplicação? colocar a diretiva ngapp-->
+  <!--ng-app é uma propriedade personalizada-->
+  <!-- quero que  o angular controle todo o html-->
+  <head>
+    <meta charset="utf-8">
+    <title>Fundamentos de Angular</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript">
+      angular.module('app', []) //nome module e dependencias []
+
+    </script>
+  </head>
+  <body>
+    {{ 1 + 1 }} <!--o que estiver dentro de {{ }} é sintaxe do angular -->
+    <!-- o angular se comunica com a aplicacao atraves de
+    - diretivas = propriedades custom do <!DOCTYPE html>
+    - double stash {{}} -->
+  
+  </body>
+</html>
