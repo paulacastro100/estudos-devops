@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <!--ng-app é uma diretiva que indica qual parte do html o angular vai controlar -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplos de AngularJS</title>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+
+    <script type="text/javascript">
+
+      var app = angular.module('myApp', []);
+
+      //Definição do controller myCtrl
+      app.controller('myCtrl', function($scope) {
+        $scope.firstname = "Paula";
+        $scope.lastname = "Castro";
+
+        $scope.changeName = function() {
+          if ($scope.firstname == "Mariana"){
+            $scope.firstname = "Paula";
+          }
+          else if ($scope.firstname == "Paula"){
+            $scope.firstname = "Mariana";
+          }
+        }
+      });
+
+      app.controller('myCtrl2', function() {
+        var p = this;
+        p.teste = "ola";
+      });
+
+
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <!--Esta div é controlada pelo controller myCtrl. Não preciso de alias pois utilizei scope-->
+    O ng-controller especifica um controller JavaScript para aquele HTML em questão.
+    <div ng-controller="myCtrl">
+
+
+      <h4>Exemplo 1 - Bind usando a diretiva ng-bind: Altera o texto de um elemento HTML automaticamente</h4>
+      <p ng-bind="firstname"></p>
+      <p ng-bind="lastname"></p>
+
+      <h4>Exemplo 2 - Bind utilizando a notação de chaves duplas { { } }</h4>
+      <p>First name: {{firstname}}</p>
+      <p>Last name: {{lastname}}</p>
+
+      <h4>Exemplo 3 - Diretiva ng-model para fazer o bind a partir do model para a view on HTML controls (input, select, textarea)<h4/>
+      <h5>É similar ao ng-bind, mas permite ligação direta bidirecional (two-way data binding ) entre a view e o escopo do aplicativo.</h5>
+      <div>
+            <input ng-model="firstname">
+      </div>
+
+      <h4>Exemplo 4 - Usando um controller para alterar a model (o dado em si). </h4>
+      <h5>Graças ao data binding do AngularJS, a view apresentará as alterações realizadas pelo controller </br>
+      O ng-click permite instanciar o evento de click, semelhante ao onclick.</h5>
+
+      <div>
+        <button ng-click="changeName()"> Trocar o nome </button>
+        {{firstname}}
+      </div>
+
+    </div>
+
+
+<h4>Exemplo 5 - Usando controller com um alias (sem scope)</h4>
+
+    <div ng-controller="myCtrl2 as c">
+      <p>Usando chaves: {{ c.teste }}</p>
+      <p ng-bind="'Usando ng-bind: ' + c.teste"></p>
+    </div>
+
+
+  </body>
+</html>
