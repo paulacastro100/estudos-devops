@@ -70,7 +70,7 @@ TODO(!!!)
   Jenkins deployment (TODO!!!)
   - Colocar  arquivo .war do jenkins no diretorio $CATALINA_HOME/webapps/
   - Restartar o Tomcat:  sh startup.sh 
-  - Acessar http://localhost:8080/ no browser
+  - Acessar http://localhost:8080/jenkins no browser
   RESULTADO: Jenkins deve estar up e rodando.
   
   O OBJETIVO É CRIAR UM JOB PARA CLONAR UM REPOSITÓRIO, RODAR TESTES E PUBLICAR RELATORIOS.
