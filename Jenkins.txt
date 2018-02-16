@@ -141,3 +141,7 @@ Exemplo OK
 Criei um job que a cada 2 min checa alterações no git e, se houver, executa um script.
 O objetivo é rodar um java script via node.
 Fonte: https://www.youtube.com/watch?v=_A32nj7aKzs&index=4&list=PL3EuFy3x9CgACt4GE7lC7GZjf6yJe6XHX
+
+
+
+https://www.packtpub.com/mapt/book/application_development/9781784390891/3
