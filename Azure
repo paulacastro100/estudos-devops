@@ -1,0 +1,32 @@
+Azure
+
+
+
+- Criação de uma VM ubuntu no Azure
+- Para conectar via ssh na VM, necessário tem um client Openssh:
+  https://mremoteng.org/download
+  https://pplware.sapo.pt/microsoft/windows/instalar-usar-cliente-ssh-windows-10/
+- Acessar a VM via SSH
+https://tecnoblog.net/229971/windows-10-ativar-openssh-cliente/
+
+- Instalação do docker
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
+OK  Setup the repository 
+OK  Install Docker CE
+
+
+OK Teste Mongo Docker
+docker run
+docker ps
+docker exec -it 
+  mongo
+    use test
+    show dbs
+    https://docs.mongodb.com/getting-started/shell/insert/
+
+
+OK Teste nginx na VM + expor porta
+https://docs.microsoft.com/pt-br/azure/virtual-machines/linux/quick-create-portal?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json
+
+
+
