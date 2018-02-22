@@ -27,6 +27,21 @@ docker exec -it
 
 OK Teste nginx na VM + expor porta
 https://docs.microsoft.com/pt-br/azure/virtual-machines/linux/quick-create-portal?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json
+$ systemctl stop nginx
+
+OK Teste jenkins na VM + expor porta (versão Jenkins 2.89.4)
+https://jenkins.io/doc/book/installing/#debian-ubuntu
+1) Instalação Jenkins na VM - (Item - Linux Debian/Ubuntu)
+2) Expor a porta 8080 na VM (como fizemos com o nginx na 80)
+3) $ systemctl start jenkins
+4) Abrir no browser ippublicovm::8080 
+5) Verificar senha administrador e inserir no jenkins
+$ cat /var/lib/jenkins/secrets/initialAdminPassword
+6) install suggested plugins
+7) criacao de um usuario (ex. paulacastro100)
+
+
+
 
 
 
