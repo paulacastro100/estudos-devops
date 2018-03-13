@@ -1,0 +1,26 @@
+JENKINS
+
+(ok) Instalação do jenkins via docker - https://jenkins.io/doc/book/installing/
+
+docker run \
+  -u root \
+  --rm \
+  -d \
+  -p 8080:8080 \
+  -p 50000:50000 \
+  -v jenkins-data:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  jenkinsci/blueocean
+  
+  
+(ok)  Definição de executor: São	threads	que	rodam	os	builds	dos	jobs.	O	Jenkins	permite que	ajuste	esse	número	de	executores	conforme	a	sua	necessidade, sendo	que,	por	padrão,	são	configurados	apenas	dois. Normalmente,	um	número	interessante	é	um	executor	para	cada core	da	máquina,	por	exemplo,	uma	máquina	quadcore	trabalharia bem	com	quatro	executores
+
+NEXUS
+
+(ok) Instalação do Nexus via docker:
+
+(ok ) Teste se ok: $curl -u admin:admin123 http://localhost:8081/service/metrics/ping
+
+(ok) Expor porta 8081 no host azure -  Grupo de segurança de rede > Add regra de segurança de entrada < 8081
+
+
