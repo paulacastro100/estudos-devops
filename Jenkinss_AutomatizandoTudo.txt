@@ -77,3 +77,12 @@ bash-4.4# ansible --version
 ansible 2.4.1.0
   config file = None
   
+
+
+ANSIBLE -------------------------------------------------------------
+
+http://ansible.pickle.io/post/86598332429/running-ansible-playbook-in-localhost
+Exemplo 1:
+$
+Exemplo 2:
+$ ansible-playbook -i "localhost," -c local helloworld.yml 
