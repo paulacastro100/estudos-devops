@@ -70,7 +70,7 @@ TODO(!!!)
   Jenkins deployment (TODO!!!)
   - Colocar  arquivo .war do jenkins no diretorio $CATALINA_HOME/webapps/
   - Restartar o Tomcat:  sh startup.sh 
-  - Acessar http://localhost:8080/ no browser
+  - Acessar http://localhost:8080/jenkins no browser
   RESULTADO: Jenkins deve estar up e rodando.
   
   O OBJETIVO É CRIAR UM JOB PARA CLONAR UM REPOSITÓRIO, RODAR TESTES E PUBLICAR RELATORIOS.
@@ -141,3 +141,7 @@ Exemplo OK
 Criei um job que a cada 2 min checa alterações no git e, se houver, executa um script.
 O objetivo é rodar um java script via node.
 Fonte: https://www.youtube.com/watch?v=_A32nj7aKzs&index=4&list=PL3EuFy3x9CgACt4GE7lC7GZjf6yJe6XHX
+
+
+
+https://www.packtpub.com/mapt/book/application_development/9781784390891/3

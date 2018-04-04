@@ -1,0 +1,47 @@
+Azure
+
+
+
+- Criação de uma VM ubuntu no Azure
+- Para conectar via ssh na VM, necessário tem um client Openssh:
+  https://mremoteng.org/download
+  https://pplware.sapo.pt/microsoft/windows/instalar-usar-cliente-ssh-windows-10/
+- Acessar a VM via SSH
+https://tecnoblog.net/229971/windows-10-ativar-openssh-cliente/
+
+- Instalação do docker
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
+OK  Setup the repository 
+OK  Install Docker CE
+
+
+OK Teste Mongo Docker
+docker run
+docker ps
+docker exec -it 
+  mongo
+    use test
+    show dbs
+    https://docs.mongodb.com/getting-started/shell/insert/
+
+
+OK Teste nginx na VM + expor porta
+https://docs.microsoft.com/pt-br/azure/virtual-machines/linux/quick-create-portal?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json
+$ systemctl stop nginx
+
+OK Teste jenkins na VM + expor porta (versão Jenkins 2.89.4)
+https://jenkins.io/doc/book/installing/#debian-ubuntu
+1) Instalação Jenkins na VM - (Item - Linux Debian/Ubuntu)
+2) Expor a porta 8080 na VM (como fizemos com o nginx na 80)
+3) $ systemctl start jenkins
+4) Abrir no browser ippublicovm::8080 
+5) Verificar senha administrador e inserir no jenkins
+$ cat /var/lib/jenkins/secrets/initialAdminPassword
+6) install suggested plugins
+7) criacao de um usuario (ex. paulacastro100)
+
+
+
+
+
+
