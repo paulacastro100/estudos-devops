@@ -1,0 +1,10 @@
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\bin\Debug\netcoreapp2.0\NetCore.deps.json
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\bin\Debug\netcoreapp2.0\NetCore.runtimeconfig.json
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\bin\Debug\netcoreapp2.0\NetCore.runtimeconfig.dev.json
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\bin\Debug\netcoreapp2.0\NetCore.dll
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\bin\Debug\netcoreapp2.0\NetCore.pdb
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\obj\Debug\netcoreapp2.0\NetCore.csproj.CoreCompileInputs.cache
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\obj\Debug\netcoreapp2.0\NetCore.AssemblyInfoInputs.cache
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\obj\Debug\netcoreapp2.0\NetCore.AssemblyInfo.cs
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\obj\Debug\netcoreapp2.0\NetCore.dll
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\NetCore\obj\Debug\netcoreapp2.0\NetCore.pdb
