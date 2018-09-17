@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-
 //Em React, um componente é funcional quando só precisa de um metodo render e naõ precisa manter seu próprio estado.
 //Ao inves de extender React.Componen, usamos apenas uma function que tem como input props e que retorna o que deve ser renderizado.
 
@@ -75,6 +74,13 @@ class Board extends React.Component {
     );
   }
 
+  renderHeader() {
+    return (
+      <Header>
+      </Header>
+    );
+  }
+
   render() {
     const vencedor = calcularVencedor(this.state.squares);
     let status;
@@ -86,6 +92,8 @@ class Board extends React.Component {
 
     return (
       <div>
+        <div className="header">{this.renderHeader()}</div>
+
         <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
@@ -104,6 +112,15 @@ class Board extends React.Component {
         </div>
       </div>
     );
+  }
+}
+
+class Header extends React.Component {
+  render() { 
+      return (
+        <p className="header">JOGO DA VELHA DA PAULA =^.^=
+        </p>
+      );
   }
 }
 
