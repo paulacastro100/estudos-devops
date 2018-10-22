@@ -1,0 +1,14 @@
+{
+  "name": "apl-api-exemplo-5",
+  "version": "0.0.9",
+  "description": "Test Project 1",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angulartics": "^1.6.0",
+    "apl-api-exemplo": "0.0.1",
+    "apl-api-exemplo-4": "0.0.1",
+    "commonjs": "0.0.1",
+    "jspdf": "^1.4.1",
+    "react": "^16.5.2"
+  }
+}

@@ -1,0 +1,77 @@
+Download for windows
+
+Run on windows:
+Unzip e rodar no cmd):
+	$ nexus.exe /run
+https://help.sonatype.com/repomanager3/installation/installation-methods
+
+
+Acessar http://localhost:8081/
+
+Login
+admin
+admin123
+
+
+---- configurando npm -----
+
+https://help.sonatype.com/learning/repository-manager-3/proxying-maven-and-npm-quick-start-guide#ProxyingMavenandNPMQuickStartGuide-Part2-ProxyingMavenandnpmComponents
+
+1) Configurar o npm proxy no nexus (usar blob default)
+2) $ npm config set registry http://localhost:8081/repository/npm-proxy
+3) Criar package json
+4) $ npm install
+5) Conferir no nexus que o pacote npm baixado esteja lá
+
+
+Testar npm publish
+1) Configurar um npm local no nexus (blob default)
+2) Configurar o npm-all no nexus
+3) Codificar em base 64 o usuario e senha do nexus:
+https://help.sonatype.com/repomanager2/node-packaged-modules-and-npm-registries#NodePackagedModulesandnpmRegistries-EncodingCredentialsonWindowsusing%22certutil%22
+
+	$ PowerShell
+		$ $Bytes = [System.Text.Encoding]::UTF8.GetBytes("nexus-publish:nexus-publish")
+[Convert]::ToBase64String($Bytes)
+
+$Bytes = [System.Text.Encoding]::UTF8.GetBytes("nexus1:nexus1")
+[Convert]::ToBase64String($Bytes)
+
+5) Salvar as configurações 
+	 always-auth=true
+	_auth="YWRtaW46YWRtaW4xMjM="
+	registry=http://localhost:8081/repository/npm-all/
+	email=publish@nexus.com
+
+Validação:
+$ npm install
+Ao fazer npm install, instala tanto pcts internos quanto externos
+
+$ npm publish --registry=http://localhost:8081/repository/npm-hosted/
+Utilizar url interna apenas no publish
+
+---- Observação:
+
+Config para quem só instala pacote:
+	registry=http://localhost:8081/repository/npm-all/
+	
+Config para publicação
+	always-auth=true
+	_auth="bmV4dXMxOm5leHVzMQ=="
+	registry=http://localhost:8081/repository/npm-all/
+	email=nexus1@nexus.com
+
+
+Permissões para publicacao
+nx-repository-view-npm-all-*
+
+
+Privilegios
+https://help.sonatype.com/repomanager3/security/privileges	
+
+
+
+
+
+C:\Users\Paula\Documents\2017\meuGit\estudos-devops\Nexus\teste-npm
+
